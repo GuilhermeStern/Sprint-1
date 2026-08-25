@@ -1,6 +1,6 @@
 def dividef (n,m):
   resultado = n/m
- return resultado 
+  return resultado 
 
 n= float(input(''))
 m= float(input(''))
