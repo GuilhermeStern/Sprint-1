@@ -4,4 +4,4 @@ def multiplica(n,m):
 
 n = float(input())
 m = float(input())
-print(multiplica(n,m)
+print(multiplica(n,m))
