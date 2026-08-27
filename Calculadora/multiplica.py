@@ -1,4 +1,4 @@
-def multiplica(n,m):
+def multiplicaf(n,m):
     resultado = n * m 
     return resultado
 
