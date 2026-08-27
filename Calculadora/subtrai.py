@@ -1,5 +1,5 @@
 
-def subtrai(num1, num2):
+def subtraif(num1, num2):
     return(num1-num2)
 
 #BP
