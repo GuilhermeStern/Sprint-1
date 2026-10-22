@@ -151,3 +151,68 @@ def remover_usuario(request):
         return redirect("home")
 
     return render(request, "remover_usuario.html")
+    @login_required
+def encontrar_parceiros(request):
+    '''
+    Esta função busca os jogadores cadastrados no banco de dados.
+    Ela utiliza a página encontrar_parceiros.html para exibir os jogadores.
+    Se o formulário de busca for enviado, mostra apenas os jogadores
+    cujo nome contém o texto pesquisado.
+    '''
+    if request.method == 'GET':
+        parceiros = User.objects.all()
+        contexto = {
+            'parceiros': parceiros,
+        }
+    else:
+        search_query = request.POST.get('search')
+        parceiros = User.objects.filter(first_name__icontains=search_query)
+        contexto = {
+            'search_query': search_query,   # o texto pesquisado
+            'parceiros': parceiros,         # os resultados da pesquisa
+        }
+    return render(request, 'encontrar_parceiros.html', contexto)
+    @login_required
+def agendar_quadras(request):
+    '''
+    Esta função exibe as quadras disponíveis para agendamento.
+    Por enquanto os dados são de exemplo, porque ainda não existe
+    uma tabela de quadras no banco de dados.
+    Ela utiliza a página agendar_quadras.html para exibir as quadras.
+    '''
+    quadras = [
+        {
+            'nome': 'Rede do Posto 9',
+            'esporte': 'Vôlei de praia',
+            'detalhes': 'Dupla · 2 de 4 vagas · Todos os níveis',
+            'horario': 'Hoje · 17:00',
+        },
+        {
+            'nome': 'Quadra de Areia Copacabana',
+            'esporte': 'Beach tennis',
+            'detalhes': 'Dupla · 1 de 2 vagas · Intermediário',
+            'horario': 'Amanhã · 08:00',
+        },
+        {
+            'nome': 'Arena Leblon',
+            'esporte': 'Vôlei de praia',
+            'detalhes': '4x4 · 3 de 8 vagas · Iniciante',
+            'horario': 'Sáb · 09:30',
+        },
+        {
+            'nome': 'Quadra de Saibro 3',
+            'esporte': 'Tênis',
+            'detalhes': 'Individual · 1 de 2 vagas · Intermediário',
+            'horario': 'Dom · 10:00',
+        },
+        {
+            'nome': 'Arena Central',
+            'esporte': 'Futsal',
+            'detalhes': '5x5 · 7 de 10 vagas · Todos os níveis',
+            'horario': 'Sáb · 20:00',
+        },
+    ]
+    contexto = {
+        'quadras': quadras,
+    }
+    return render(request, 'agendar_quadras.html', contexto)

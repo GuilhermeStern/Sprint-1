@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MatchPoint — Agendar Quadras</title>
+
+    <link rel="stylesheet" href="{% static 'estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'parceiros.css' %}">
+    <link rel="stylesheet" href="{% static 'quadras.css' %}">
+</head>
+
+<body class="parceiros-page">
+
+    <header class="parceiros-navbar">
+        <a href="{% url 'home' %}" class="parceiros-logo">
+            match<span>point</span><b>.</b>
+        </a>
+
+        <nav class="parceiros-nav">
+            <a href="{% url 'home' %}">Início</a>
+            <a href="{% url 'encontrar_parceiros' %}">Encontrar parceiros</a>
+            <a href="{% url 'agendar_quadras' %}" class="parceiros-nav-ativo">Agendar quadras</a>
+            <a href="{% url 'editar_usuario' %}">Meu perfil</a>
+        </nav>
+    </header>
+
+    <main class="parceiros-main">
+
+        <section class="parceiros-intro">
+            <span class="parceiros-eyebrow">COMUNIDADE</span>
+
+            <h1>Agendar Quadras<span>.</span></h1>
+
+            <p>Encontre seu espaço de jogo.</p>
+        </section>
+
+        <section class="parceiros-grade">
+            {% for quadra in quadras %}
+                <article class="parceiro-card">
+                    <span class="parceiro-tag">{{ quadra.esporte }}</span>
+
+                    <h3 class="quadra-nome">{{ quadra.nome }}</h3>
+
+                    <p class="quadra-detalhes">{{ quadra.detalhes }}</p>
+
+                    <p class="quadra-horario">{{ quadra.horario }}</p>
+                </article>
+            {% empty %}
+                <div class="parceiros-vazio-geral">
+                    <strong>Nenhuma quadra disponível</strong>
+                    <p>Volte mais tarde para ver novos horários.</p>
+                </div>
+            {% endfor %}
+        </section>
+
+    </main>
+
+</body>
+</html>
