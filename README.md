@@ -1,4 +1,4 @@
-# MatchPoint — Time 4
+<img width="1512" height="888" alt="image" src="https://github.com/user-attachments/assets/ceea7be8-ccee-4b0f-8cab-4d5ccb2561c3" /># MatchPoint — Time 4
 
 **MatchPoint** é um projeto que propõe uma experiência semelhante ao Tinder, mas voltada para a prática de esportes: conectar pessoas que procuram parceiros para praticar atividades esportivas.
 
@@ -30,7 +30,7 @@ As instruções abaixo apresentam uma orientação geral para explorar o protót
 
 Abra o protótipo do MatchPoint e explore a tela inicial.
 
-(![Tela inicial do MatchPoint](Prototipa%C3%A7%C3%A3o/Screenshot%202026-10-01%20at%2018.42.09.png)
+(![Tela inicial do MatchPoint](<img width="1508" height="859" alt="Screenshot 2026-10-22 at 20 20 24" src="https://github.com/user-attachments/assets/2a0be4b3-c599-45bd-899e-7dd57ff32635" />)
 
 ### 2. Explore as telas disponíveis
 
