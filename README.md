@@ -1,4 +1,4 @@
-<img width="1512" height="888" alt="image" src="https://github.com/user-attachments/assets/ceea7be8-ccee-4b0f-8cab-4d5ccb2561c3" /># MatchPoint — Time 4
+# MatchPoint — Time 4
 
 **MatchPoint** é um projeto que propõe uma experiência semelhante ao Tinder, mas voltada para a prática de esportes: conectar pessoas que procuram parceiros para praticar atividades esportivas.
 
@@ -30,28 +30,54 @@ As instruções abaixo apresentam uma orientação geral para explorar o protót
 
 Abra o protótipo do MatchPoint e explore a tela inicial.
 
-(![Tela inicial do MatchPoint](<img width="1508" height="859" alt="Screenshot 2026-10-22 at 20 20 24" src="https://github.com/user-attachments/assets/2a0be4b3-c599-45bd-899e-7dd57ff32635" />)
+(![Tela inicial do MatchPoint](<img width="1512" height="888" alt="image" src="https://github.com/user-attachments/assets/ceea7be8-ccee-4b0f-8cab-4d5ccb2561c3" />)
 
 ### 2. Explore as telas disponíveis
 
 Navegue pelas telas do protótipo para conhecer a proposta visual e as funcionalidades planejadas para o MatchPoint.
 
-![Telas do protótipo MatchPoint](imagens/telas-prototipo.png)
+![Telas do protótipo MatchPoint](esperando_a_criacao_da_tela.png)
 
 
 ### 3. Conheça a proposta de conexão entre pessoas
 
 A proposta do MatchPoint é aproximar pessoas que compartilham o interesse em praticar esportes, facilitando a busca por parceiros para essas atividades.
 
-![Fluxo de conexão do MatchPoint](imagens/fluxo-conexao.png)
+![Fluxo de conexão do MatchPoint](esperando_a_criacao_da_tel.png)
 
 
 
 ## Tecnologias e recursos
 
-O projeto está em desenvolvimento. As tecnologias e os recursos efetivamente utilizados devem ser documentados conforme forem definidos e implementados pela equipe.
+O MatchPoint está sendo desenvolvido como uma aplicação web, utilizando tecnologias para estruturar as páginas, implementar funcionalidades e gerenciar as informações dos usuários.
+
+### Tecnologias utilizadas
+
+- **Python:** linguagem de programação utilizada no desenvolvimento do sistema.
+- **Django:** framework utilizado para desenvolver a aplicação web, organizar as funcionalidades e gerenciar as requisições.
+- **HTML:** utilizado para estruturar as páginas, como login, cadastro e edição de perfil.
+- **CSS:** utilizado para estilizar a interface, definindo cores, fontes, espaçamentos e organização dos elementos.
+- **Bootstrap:** utilizado como recurso de apoio para a estilização das páginas e a adaptação da interface a diferentes tamanhos de tela.
+- **SQLite:** banco de dados utilizado para armazenar e organizar as informações da aplicação durante o desenvolvimento.
+
+### Recursos do sistema
+
+O projeto está sendo desenvolvido para oferecer recursos que facilitem a conexão entre pessoas interessadas em praticar esportes.
+
+Entre os principais recursos estão:
+
+- **Edição de perfil:** possibilidade de atualizar as informações do usuário.
+- **Cadastro de informações esportivas:** registro dos esportes de interesse dos usuários.
+- **Busca por parceiros:** proposta de encontrar pessoas com interesses esportivos em comum.
+- **Compatibilidade entre usuários:** possibilidade de considerar fatores como disponibilidade e localização para facilitar a organização de atividades esportivas.
+
+A disponibilidade de cada recurso depende do estágio de implementação do protótipo.
 
 ## Estado atual
 
-O MatchPoint encontra-se na fase de prototipação. As imagens e instruções deste README devem acompanhar a evolução do projeto, refletindo as telas e funcionalidades realmente disponíveis.
+O MatchPoint encontra-se em fase de prototipação e desenvolvimento. A equipe está trabalhando na construção da interface, na organização das informações dos usuários e na implementação das funcionalidades previstas para o sistema.
+
+Este README será atualizado conforme o desenvolvimento avançar, incluindo novas telas, instruções de utilização e informações sobre os recursos efetivamente implementados.
+
+
 
