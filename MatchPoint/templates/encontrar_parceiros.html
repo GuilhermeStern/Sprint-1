@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MatchPoint — Encontrar Parceiros</title>
+
+    <link rel="stylesheet" href="{% static 'estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'parceiros.css' %}">
+</head>
+
+<body class="parceiros-page">
+
+    <header class="parceiros-navbar">
+        <a href="{% url 'home' %}" class="parceiros-logo">
+            match<span>point</span><b>.</b>
+        </a>
+
+        <nav class="parceiros-nav">
+            <a href="{% url 'home' %}">Início</a>
+            <a href="{% url 'encontrar_parceiros' %}" class="parceiros-nav-ativo">Encontrar parceiros</a>
+            <a href="{% url 'editar_usuario' %}">Meu perfil</a>
+        </nav>
+    </header>
+
+    <main class="parceiros-main">
+
+        <section class="parceiros-intro">
+            <span class="parceiros-eyebrow">COMUNIDADE</span>
+
+            <h1>Encontrar Parceiros<span>.</span></h1>
+
+            <p>Veja perto de você quem está procurando jogar em times ou duplas.</p>
+        </section>
+
+        <form action="" method="post" class="parceiros-filtros">
+            {% csrf_token %}
+            <input type="text" name="search" placeholder="Buscar parceiro..." value="{{ search_query }}">
+            <button type="submit" class="parceiros-botao">Buscar</button>
+        </form>
+
+        <section class="parceiros-grade">
+            {% for parceiro in parceiros %}
+                {% if parceiro != request.user %}
+                    <article class="parceiro-card">
+                        <div class="parceiro-topo">
+                            <div class="parceiro-avatar">
+                                {% if parceiro.perfil.foto %}
+                                    <img src="{{ parceiro.perfil.foto }}" alt="Foto de {{ parceiro.first_name }}">
+                                {% endif %}
+                            </div>
+
+                            <h3>{{ parceiro.first_name }} {{ parceiro.last_name }}</h3>
+                        </div>
+
+                        <div class="parceiro-esportes">
+                            {% for item in parceiro.esportes.all %}
+                                <span class="parceiro-tag">{{ item.esporte.nome }} · {{ item.nivel }}</span>
+                            {% empty %}
+                                <span class="parceiro-vazio">Nenhum esporte informado</span>
+                            {% endfor %}
+                        </div>
+                    </article>
+                {% endif %}
+            {% empty %}
+                <div class="parceiros-vazio-geral">
+                    <strong>Nenhum jogador encontrado</strong>
+                    <p>Tente buscar por outro nome.</p>
+                </div>
+            {% endfor %}
+        </section>
+
+    </main>
+
+</body>
+</html>

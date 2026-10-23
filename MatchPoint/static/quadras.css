@@ -1,0 +1,25 @@
+/* ===== MATCHPOINT: AGENDAR QUADRAS ===== */
+
+
+
+.quadra-nome {
+    margin: 0;
+    font-size: 18px;
+}
+
+.quadra-detalhes {
+    margin: 0;
+    color: var(--p-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.quadra-horario {
+    margin: 0;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--p-border);
+    color: var(--p-green);
+    font-size: 14px;
+    font-weight: 700;
+}
