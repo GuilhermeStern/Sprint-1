@@ -1,0 +1,123 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem vindo! - Crie sua conta no MatchPoint :)</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>MatchPoint 🎾</h1>
+    <p class="subtitulo"> Encontre parceiros de jogo, e muito mais!</p>
+
+    <form action="#" method="POST">
+
+
+      <fieldset>
+        <legend>Dados de Acesso</legend>
+        
+        <div class="campo">
+          <label for="username">Nome de Usuário (Username):</label>
+          <input type="text" id="username" name="username" placeholder="Ex: joao_tenis" required>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" placeholder="Crie uma senha segura" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sobre Você</legend>
+
+        <div class="campo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" min="10" max="100" placeholder="Ex: 25" required>
+        </div>
+
+        <div class="campo">
+          <label for="tempo_jogo">Há quanto tempo você joga?</label>
+          <select id="tempo_jogo" name="tempo_jogo" required>
+            <option value="">Selecione uma opção...</option>
+            <option value="iniciante">Estou começando agora</option>
+            <option value="menos_1_ano">Menos de 1 ano</option>
+            <option value="1_a_3_anos">De 1 a 3 anos</option>
+            <option value="mais_3_anos">Mais de 3 anos</option>
+          </select>
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Esportes de Interesse</legend>
+        <p class="aviso-deck">Selecione os esportes que você pratica ou quer praticar:</p>
+
+        <div class="deck-esportes">
+          <label class="card-esporte">
+            <input type="checkbox" name="esportes" value="beach_tennis"> Beach Tennis
+          </label>
+
+          <label class="card-esporte">
+            <input type="checkbox" name="esportes" value="tenis"> Tênis
+          </label>
+
+          <label class="card-esporte">
+            <input type="checkbox" name="esportes" value="futevolei"> Futevôlei
+          </label>
+
+          <label class="card-esporte">
+            <input type="checkbox" name="esportes" value="volei"> Vôlei
+          </label>
+
+          <label class="card-esporte">
+            <input type="checkbox" name="esportes" value="padel"> Padel
+          </label>
+
+          <label class="card-esporte">
+            <input type="checkbox" name="esportes" value="futebol"> Futebol / Society
+          </label>
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Disponibilidade</legend>
+
+        <div class="campo">
+          <label>Dias da semana disponíveis:</label>
+          <div class="opcoes-linha">
+            <label><input type="checkbox" name="dias" value="segunda"> Seg</label>
+            <label><input type="checkbox" name="dias" value="terca"> Ter</label>
+            <label><input type="checkbox" name="dias" value="quarta"> Qua</label>
+            <label><input type="checkbox" name="dias" value="quinta"> Qui</label>
+            <label><input type="checkbox" name="dias" value="sexta"> Sex</label>
+            <label><input type="checkbox" name="dias" value="sabado"> Sáb</label>
+            <label><input type="checkbox" name="dias" value="domingo"> Dom</label>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label>Horários de preferência:</label>
+          <div class="opcoes-linha">
+            <label><input type="checkbox" name="horarios" value="manha"> Manhã</label>
+            <label><input type="checkbox" name="horarios" value="tarde"> Tarde</label>
+            <label><input type="checkbox" name="horarios" value="noite"> Noite</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Botão de Finalizar -->
+      <button type="submit">Criar minha conta no MatchPoint</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
